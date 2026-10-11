@@ -1,0 +1,60 @@
+/* :root.dark{
+    --bgc:;
+    --txtc: ;
+}
+
+:root.light{
+
+} */
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 1%;
+    text-transform: uppercase;
+}
+
+/* slide switch*/
+.display-mode{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10%;
+    
+    position: relative;
+    width: 3em;
+    height: 1em;
+    padding: 0.5%;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.display-mode input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0%;
+    z-index: 5;
+}
+
+.display-mode span{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.display-mode input:checked + span{
+    transform: translateX(200%);
+}
+
+.display-mode input:checked + .toggle-colour{
+    background-color: midnightblue;
+} /* Slide switch end */
