@@ -1,11 +1,16 @@
-/* :root.dark{
-    --bgc:;
-    --txtc: ;
+:root.dark{
+    --bgc: grey;
+    --txtc: grey;
+    --thm-2: #f4e8d6;
+    --thm-1: #734e38;
 }
 
 :root.light{
-
-} */
+    --bgc: grey;
+    --txtc: grey;
+    --thm-1: #f4e8d6;
+    --thm-2: #734e38;
+}
 
 html, body{
     margin: 0;
@@ -22,7 +27,7 @@ header{
 }
 
 /* slide switch*/
-.display-mode{
+.display-theme{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -31,31 +36,47 @@ header{
     position: relative;
     width: 3em;
     height: 1em;
-    padding: 0.5%;
+    padding: 4px 0;
     border-radius: 30px;
-    background-color: grey;
+    background-color: var(--thm-1);
 }
 
-.display-mode input{
+.display-theme input{
     width: 100%;
     height: 100%;
     position: absolute;
+
     opacity: 0%;
     z-index: 10;
     cursor: pointer;
 }
 
-.display-mode span{
+.slider{
+    margin-left: 10%;
     width: 1em;
     height: 1em;
     border-radius: 50%;
     background-color: white;
 }
 
-.display-mode input:checked + span{
-    transform: translateX(200%);
+.display-theme .mode-icon::before{
+    position: absolute;
+    top: 3%;
+    left: 60%;
+    content: "𖤓";
+    color: var(--thm-2);
 }
 
-.display-mode:has(input:checked){
-    background-color: midnightblue;
+.display-theme input:checked + .slider + .mode-icon::before{
+    left: 10%;
+    content: "⏾";
+}
+
+.display-theme input:checked + .slider{
+    transform: translateX(175%);
+    margin-left: 0;
+}
+
+.display-theme:has(input:checked){
+    /* background-color: ; */
 } /* Slide switch end */
