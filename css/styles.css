@@ -33,7 +33,7 @@ header{
     height: 1em;
     padding: 0.5%;
     border-radius: 30px;
-    cursor: pointer;
+    background-color: grey;
 }
 
 .display-mode input{
@@ -41,7 +41,8 @@ header{
     height: 100%;
     position: absolute;
     opacity: 0%;
-    z-index: 5;
+    z-index: 10;
+    cursor: pointer;
 }
 
 .display-mode span{
@@ -55,6 +56,6 @@ header{
     transform: translateX(200%);
 }
 
-.display-mode input:checked + .toggle-colour{
+.display-mode:has(input:checked){
     background-color: midnightblue;
 } /* Slide switch end */
