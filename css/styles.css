@@ -6,7 +6,7 @@
 }
 
 :root.light{
-    --bgc: grey;
+    --bgc: white;
     --txtc: grey;
     --thm-1: #f4e8d6;
     --thm-2: #734e38;
@@ -15,6 +15,7 @@
 html, body{
     margin: 0;
     padding: 0;
+    background-color: var(--bgc, white);
 }
 
 header{
