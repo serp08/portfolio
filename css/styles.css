@@ -27,6 +27,7 @@ header{
     justify-content: space-evenly;
     align-items: center;
     text-transform: uppercase;
+    padding: 0 20%;
 }
 
 header a{
@@ -34,11 +35,18 @@ header a{
     color: var(--thm-2, black);
     flex: 1;
     text-align: center;
-    padding: 1em 0;
-}
+    padding: 2em 0 1em 0;
 
-header a:hover{ /* darken the background for responsiveness */
-    background-color: rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(var(--thm-2), var(--thm-2));
+    background-size: 0% 0.1em;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+
+    &:hover{ /* darken the background for responsiveness */
+        background-size: 60% 0.1em;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 
 /* slide switch*/
@@ -53,8 +61,7 @@ header a:hover{ /* darken the background for responsiveness */
     height: 1em;
     border-radius: 30px;
     padding: 4px 0;
-    margin-right: 3em;
-    margin-left: 3em;
+    margin: 1em 3em 0 3em;
     background-color: var(--thm-1);
 }
 
@@ -80,7 +87,7 @@ header a:hover{ /* darken the background for responsiveness */
 
 .display-theme .mode-icon::before{
     position: absolute;
-    top: 3%;
+    top: 5%;
     left: 60%;
     content: "𖤓";
     color: var(--thm-2);
