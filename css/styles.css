@@ -19,8 +19,14 @@
 }
 
 /* :root{ set font families
+    --site-padding: 20%;
     --ff-headings: 
 } */
+
+body{
+    display: flex;
+    flex-direction: column;
+}
 
 header{
     display: flex;
@@ -104,3 +110,4 @@ header a{
     transform: translateX(175%);
     margin-left: 0;
 } /* Slide switch end */
+
