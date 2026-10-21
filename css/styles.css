@@ -68,7 +68,7 @@ header a{
 
     &:hover{
         background-size: 60% 0.1rem;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgb(0 0 0/0.1);
     }
 
     &:hover::before{
@@ -149,10 +149,31 @@ header a{
     & button{
         margin: 1rem;
         padding: 0.5rem;
+        border-radius: 0.5rem;
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+        /* &:active{
+            
+        } */
     }
 }
 
 .web-info{
     display: flex;
     justify-content: space-between;
+}
+
+.temp{
+    display: flex;
+    & .experience{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.skills-list > ul{
+    display: hidden;
 }
