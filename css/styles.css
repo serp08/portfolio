@@ -159,7 +159,7 @@ header a{
         margin: 1rem;
         padding: 0.5rem;
         border-radius: 0.5rem;
-
+        cursor: pointer;
         &:hover{
             text-decoration: underline;
         }
@@ -185,11 +185,25 @@ header a{
         flex-direction: column;
     }
     
-    & .skills-list{
+    & .skill-list{
         width: auto;
     }
 }
 
-.tablists{
+.skill-tabs button{
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+
+    padding: 1rem 2rem 0 2rem;
+    color: var(--thm-2);
+    background-color: var(--bgc);
+
+    &:hover, &.active{
+        background-color: rgb(0 0 0/0.1);
+    }
+}
+
+.tablists.fields{
     display: none;
 }
