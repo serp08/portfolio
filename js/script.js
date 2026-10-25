@@ -1,4 +1,5 @@
 const root = document.documentElement;
+const skills = document.querySelector('.skills-list');
 
 window.onload = function(){
     if(window.matchMedia('(prefers-color-scheme: dark)').matches){
@@ -17,4 +18,12 @@ document.querySelector('.display-theme').addEventListener('click', function(even
     const toggle = event.target;
     const setTheme = (toggle.checked) ? 'dark' : 'light';
     root.className = setTheme;
+});
+
+skills.addEventListener('click', function(event){
+    if(event.target.type === 'button'){
+        if(event.target.id === 'skills'){
+            document.getElementById('languages', 'frameworks', 'devtools').style.display = 'block';
+        }
+    }
 });
