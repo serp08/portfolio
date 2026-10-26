@@ -76,14 +76,14 @@ header a{
     &:hover{
         background-size: 60% 0.1rem;
         background-color: rgb(0 0 0/0.1);
-    }
 
-    &:hover::before{
-        content: "[ ";
-    }
+        &::before{
+            content: "[ ";
+        }
 
-    &:hover::after{
-        content: " ]";
+        &::after{
+            content: " ]";
+        }
     }
 }
 
@@ -178,7 +178,7 @@ header a{
     padding: var(--site-padding);
 
     & .experience{
-        width: 70%;
+        width: 65%;
         display: flex;
         flex-direction: column;
     }
@@ -193,13 +193,19 @@ header a{
 }
 
 .skill-tabs button{
-    margin: 0;
+    width: 50%;
     border: 0;
     box-shadow: none;
 
-    padding: 1rem 2rem 0 2rem;
+    /* padding: 1rem 2rem 0 2rem; */
     color: var(--thm-2);
     background-color: var(--bgc);
+    
+    background-image: linear-gradient(var(--thm-2), var(--thm-2));
+    background-size: 0% 0.1em;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    transition: background-color 0.3s;
 
     &:hover{
         background-color: rgb(0 0 0/0.1);
@@ -207,13 +213,36 @@ header a{
 
     &.active{
         background-color: rgb(0 0 0/0.2);
-        background-image: linear-gradient(var(--thm-2), var(--thm-2));
         background-size: 100% 0.1em;
-        background-position: 50% 100%;
-        background-repeat: no-repeat;
+
+        &::before{
+            content: "[ ";
+        }
+
+        &::after{
+            content: " ]";
+        }
     }
 }
 
-.tablists.fields{
+.tablists{
+    list-style: none;
+    
+}
+
+
+.fields.tablists{
     display: none;
+}
+
+.skills{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    & ul{
+        min-width: 100%;
+        & li{
+            scroll-snap-align: start;
+        }
+    }
 }

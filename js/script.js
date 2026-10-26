@@ -28,23 +28,19 @@ skills.addEventListener('click', function(event){
         // Remove prior selection indicator and change to current 'tab'
         const childrenList = document.querySelector('.skill-tabs').children;
         for(let i = 0; i < childrenList.length; i++) {
-            childrenList[i].className = (childrenList[i] !== event.target)? childrenList[i].className.replace(" active", "") : childrenList[i].className + " active";
+            const sel = childrenList[i];
+            sel.className = (sel !== event.target)? sel.className.replace(" active", "") :
+                (!sel.className.includes(" active")) ? sel.className + " active" : sel.className;
         };
 
         // Switch between the two tabs, depending on user selection
         if(event.target.id === 'skills'){
             document.querySelector('.fields').style.display = 'none';
 
-            const skills = document.querySelectorAll('.skills');
-            skills.forEach((skillList) => {
-                skillList.style.display = 'block';
-            });
+            document.querySelector('.skills').style.display = 'flex';
         }
         else{
-            const skills = document.querySelectorAll('.skills');
-            skills.forEach((skillList) => {
-                skillList.style.display = 'none';
-            });
+            document.querySelector('.skills').style.display = 'none';
 
             document.querySelector('.fields').style.display = 'block';
         }
