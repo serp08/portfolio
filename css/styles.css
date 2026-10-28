@@ -175,6 +175,7 @@ header a{
 
 .main-content{
     display: flex;
+    gap: 2rem;
     padding: var(--site-padding);
 
     & .experience{
@@ -184,7 +185,7 @@ header a{
     }
     
     & .skill-list{
-        width: auto;
+        width: 35%;
     }
 }
 
@@ -192,8 +193,12 @@ header a{
     background-color: var();
 }
 
+.skill-tabs{
+    display: flex;
+}
+
 .skill-tabs button{
-    width: 50%;
+    flex: 1;
     border: 0;
     box-shadow: none;
 
