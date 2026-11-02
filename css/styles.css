@@ -174,8 +174,9 @@ header a{
 }
 
 .web-info{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
 }
 
 .main-content{
