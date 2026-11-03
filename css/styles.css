@@ -216,7 +216,7 @@ header a{
     flex: 1;
     padding-top: 1rem;
     border: 0;
-    border-radius: 1rem;
+    border-radius: .8rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     box-shadow: none;
@@ -249,6 +249,7 @@ header a{
 }
 
 .tablists{
+    min-width: 100%;
     list-style: none;
     background-color: var(--thm-3);
     text-align: center;
